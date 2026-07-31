@@ -30,41 +30,48 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-[calc(100vh-72px)] bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+      className="relative min-h-[88vh] bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/hero-bg.jpg')",
+      }}
     >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/65" />
 
-      {/* Hero Content */}
-      <div className="relative mx-auto flex min-h-[calc(100vh-72px)] max-w-7xl flex-col justify-center px-6 pt-16 pb-32 text-white lg:pt-20">
+      {/* Content */}
+      <div className="relative mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-center px-6 pt-20 pb-12 text-white">
         <div className="max-w-2xl">
-          {/* Company Name */}
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-green-400">
-            PaperNova Industries
-          </p>
+          {/* Badge */}
+          <div className="mb-6 inline-flex items-center rounded-full border border-green-400/40 bg-green-500/10 px-5 py-2 backdrop-blur-sm">
+            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-green-400">
+              PaperNova Industries
+            </span>
+          </div>
 
-          {/* Main Heading */}
-          <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+          {/* Heading */}
+          <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             Manufacturing Premium
-            <span className="block text-green-400">
+
+            <span className="mt-2 block text-green-400">
               Paper Solutions
             </span>
-            <span className="block text-white">
+
+            <span className="mt-2 block text-white">
               for Modern Businesses
             </span>
           </h1>
 
           {/* Description */}
-          <p className="mt-8 max-w-xl text-lg leading-8 text-slate-200 md:text-xl">
-            PaperNova Industries manufactures high-quality paper products for
-            schools, offices, publishers, wholesalers, and industrial clients
-            across India with a commitment to quality, innovation, and timely
+          <p className="mt-8 max-w-xl text-lg leading-8 text-slate-200">
+            PaperNova Industries manufactures premium-quality paper products
+            for educational institutions, corporate offices, publishers,
+            wholesalers, and industrial businesses across India with an
+            uncompromising commitment to quality, innovation, and timely
             delivery.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="mt-10 flex flex-wrap gap-4">
+          {/* Buttons */}
+          <div className="mt-10 flex flex-wrap gap-5">
             <PrimaryButton>
               Explore Products
             </PrimaryButton>
@@ -74,8 +81,8 @@ export default function Hero() {
             </PrimaryButton>
           </div>
 
-          {/* Statistics */}
-          <div className="mt-12 grid max-w-2xl grid-cols-2 gap-4 lg:grid-cols-4">
+          {/* Stats */}
+          <div className="mt-14 grid max-w-2xl grid-cols-2 gap-5 lg:grid-cols-4">
             {stats.map((stat) => (
               <StatsCard
                 key={stat.label}
@@ -87,13 +94,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Product Highlights */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-white/10 bg-white/10 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-5 px-6 py-6">
+      {/* Bottom Strip */}
+      <div className="absolute bottom-0 left-0 w-full border-t border-white/10 bg-black/25 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-4 px-6 py-4">
           {products.map((product) => (
             <div
               key={product}
-              className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
+              className="rounded-full border border-white/15 bg-white/10 px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:border-green-400 hover:bg-green-600/30"
             >
               {product}
             </div>
