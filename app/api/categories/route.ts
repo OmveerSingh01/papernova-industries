@@ -1,13 +1,13 @@
 import { NextRequest } from "next/server";
 
-import { createCategorySchema } from "@/app/validations/category";
+import { categorySchema } from "@/app/validations/category";
 import { createCategoryService } from "@/app/services/category.service";
 import { requireAdmin } from "@/app/middleware/auth";
 import {
   successResponse,
   errorResponse,
 } from "@/app/lib/api-response";
-
+import { getAllCategoriesService } from "@/app/services/category.service";
 export async function POST(request: NextRequest) {
   try {
     // Only ADMIN can create categories
@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     // Validate request
-    const validation = createCategorySchema.safeParse(body);
+    const validation = categorySchema.safeParse(body);
 
     if (!validation.success) {
       return errorResponse(
@@ -41,5 +41,22 @@ export async function POST(request: NextRequest) {
     }
 
     return errorResponse("Internal Server Error", 500);
+  }
+}
+export async function GET() {
+  try {
+    const categories = await getAllCategoriesService();
+
+    return successResponse(
+      "Categories fetched successfully.",
+      categories
+    );
+  } catch (error) {
+    console.error(error);
+
+    return errorResponse(
+      "Internal Server Error",
+      500
+    );
   }
 }

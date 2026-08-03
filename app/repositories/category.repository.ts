@@ -24,3 +24,43 @@ export async function createCategory(
     data,
   });
 }
+export async function getAllCategories() {
+  return prisma.category.findMany({
+    where: {
+      isActive: true,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+}
+export async function updateCategory(
+  id: string,
+  data: Prisma.CategoryUpdateInput
+) {
+  return prisma.category.update({
+    where: {
+      id,
+    },
+    data,
+  });
+}
+
+export async function deactivateCategory(id: string) {
+  return prisma.category.update({
+    where: {
+      id,
+    },
+    data: {
+      isActive: false,
+    },
+  });
+}
+export async function getCategoryById(id: string) {
+  return prisma.category.findFirst({
+    where: {
+      id,
+      isActive: true,
+    },
+  });
+}

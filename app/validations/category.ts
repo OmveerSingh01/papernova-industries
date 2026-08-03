@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const createCategorySchema = z.object({
+export const categorySchema = z.object({
   name: z
     .string()
     .trim()
@@ -23,5 +23,4 @@ export const createCategorySchema = z.object({
     .optional(),
 });
 
-export type CreateCategoryInput =
-  z.infer<typeof createCategorySchema>;
+export type CategoryInput = z.infer<typeof categorySchema>;
