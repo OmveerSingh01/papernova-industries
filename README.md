@@ -1,36 +1,192 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PaperNova Industries
 
-## Getting Started
+### Full-Stack E-Commerce & Business Management Platform
 
-First, run the development server:
+PaperNova Industries is a full-stack web application for a paper products business, featuring a dynamic product catalog, customer ordering system, and admin dashboard for managing products, customers, orders, and inquiries.
+
+## 🌐 Live Demo
+
+- **Website:** [papernova-industries.vercel.app](https://papernova-industries.vercel.app/)
+- **GitHub:** [github.com/OmveerSingh01/papernova-industries](https://github.com/OmveerSingh01/papernova-industries)
+
+---
+
+## ✨ Features
+
+### Customer
+- User registration and login
+- Browse products and categories
+- Product details with images
+- Shopping cart
+- Checkout and order placement
+- View order history
+- Contact/inquiry submission
+
+### Admin
+- Secure admin authentication
+- Dashboard with business overview
+- Product and category management
+- Add/edit products and prices
+- Product image uploads
+- Stock management
+- Customer management
+- Order management and status updates
+- Inquiry management
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+**Backend**
+- Next.js API Routes
+- REST APIs
+- JWT Authentication
+- Zod Validation
+
+**Database & Storage**
+- PostgreSQL
+- Prisma ORM
+- Supabase Storage
+
+**Deployment**
+- Vercel
+
+---
+
+## 🏗️ Project Structure
+
+```text
+papernova-industries/
+├── app/
+│   ├── admin/
+│   ├── api/
+│   ├── cart/
+│   ├── checkout/
+│   ├── login/
+│   ├── orders/
+│   ├── products/
+│   └── register/
+│
+├── components/
+│   ├── admin/
+│   ├── layout/
+│   ├── sections/
+│   └── ui/
+│
+├── prisma/
+│   ├── migrations/
+│   └── schema.prisma
+│
+└── public/
+```
+
+---
+
+## 🔐 Authentication
+
+The application includes:
+
+- JWT-based authentication
+- Protected customer routes
+- Protected admin routes
+- Role-based access control
+- Zod request validation
+- Environment-based secret management
+
+Sensitive credentials are stored in environment variables and are not committed to the repository.
+
+---
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/OmveerSingh01/papernova-industries.git
+cd papernova-industries
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Configure environment variables
+
+Create a `.env` file in the project root:
+
+```env
+DATABASE_URL="your_database_url"
+DIRECT_URL="your_direct_database_url"
+JWT_SECRET="your_jwt_secret"
+
+ADMIN_NAME="your_admin_name"
+ADMIN_EMAIL="your_admin_email"
+ADMIN_PASSWORD="your_admin_password"
+
+NEXT_PUBLIC_SUPABASE_URL="your_supabase_url"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="your_supabase_anon_key"
+```
+
+### Run Prisma
+
+```bash
+npx prisma generate
+npx prisma migrate deploy
+```
+
+### Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Production
 
-## Learn More
+Build the application:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The production application is deployed on [Vercel](https://vercel.com/).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔮 Future Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Online/UPI payments
+- Email notifications
+- Product reviews and ratings
+- Wishlist
+- Coupon/discount system
+- Sales analytics
+- Invoice generation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 👨‍💻 Developer
+
+**Omveer Singh**
+B.Tech – Computer Science & Engineering
+
+[GitHub](https://github.com/OmveerSingh01) • [LinkedIn](https://linkedin.com/in/omveersingh09)
+
+---
+
+### 🌟 PaperNova Industries 🌟
+
+*Manufacturing Excellence. Delivering Trust.*
+
+Crafted with care, delivered with pride — explore our products today.
