@@ -7,17 +7,41 @@ import {
 } from "react-icons/fa";
 
 const quickLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Products", href: "/products" },
-  { name: "Contact", href: "/contact" },
+  {
+    name: "Home",
+    href: "/#",
+  },
+  {
+    name: "About",
+    href: "/#about",
+  },
+  {
+    name: "Products",
+    href: "/#products",
+  },
+  {
+    name: "Contact",
+    href: "/#contact",
+  },
 ];
 
 const products = [
-  { name: "Premium Notebooks", href: "/products" },
-  { name: "Copier Paper", href: "/products" },
-  { name: "File Folders", href: "/products" },
-  { name: "Registers", href: "/products" },
+  {
+    name: "Premium Notebooks",
+    href: "/#products",
+  },
+  {
+    name: "Copier Paper",
+    href: "/#products",
+  },
+  {
+    name: "File Folders",
+    href: "/#products",
+  },
+  {
+    name: "Registers",
+    href: "/#products",
+  },
 ];
 
 const socialLinks = [
@@ -40,140 +64,187 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company */}
-          <div>
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/logo.png" // Replace with your logo path
-                alt="PaperNova Industries Logo"
-                width={44}
-                height={44}
-                className="rounded-full"
-              />
+    <footer className="bg-slate-950 text-gray-400">
 
-              <div>
-                <h3 className="text-xl font-bold text-white">
-                  PaperNova Industries
-                </h3>
-              </div>
-            </Link>
+      {/* Main Footer */}
 
-            <p className="mt-5 text-gray-400 leading-relaxed">
-              Manufacturing Excellence.
-              <br />
-              Delivering Trust.
-            </p>
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
 
-            <div className="flex items-center gap-4 mt-6">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
+        {/* Company */}
 
-                return (
-                  <Link
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-green-600 hover:border-green-600 transition-all duration-300"
-                  >
-                    <Icon size={18} />
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
+        <div>
+          <Link
+            href="/"
+            className="flex items-center gap-4"
+          >
+            <Image
+              src="/logo.png"
+              alt="PaperNova Industries Logo"
+              width={56}
+              height={56}
+              className="rounded-full"
+            />
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-5">
-              Quick Links
-            </h4>
+            <h3 className="text-xl font-bold text-white">
+              PaperNova Industries
+            </h3>
+          </Link>
 
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="hover:text-green-500 transition-colors duration-300"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="mt-5 leading-relaxed text-gray-400">
+            Manufacturing Excellence.
+            <br />
+            Delivering Trust.
+          </p>
 
-          {/* Products */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-5">
-              Products
-            </h4>
+          {/* Social Links */}
 
-            <ul className="space-y-3">
-              {products.map((product) => (
-                <li key={product.name}>
-                  <Link
-                    href={product.href}
-                    className="hover:text-green-500 transition-colors duration-300"
-                  >
-                    {product.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="mt-6 flex items-center gap-4">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
 
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-5">
-              Contact
-            </h4>
-
-            <ul className="space-y-4 text-gray-400">
-              <li>📞 +91 98765 XXXXX</li>
-              <li>✉️ info@papernova.com</li>
-              <li>📍 Jaipur, Rajasthan, India</li>
-            </ul>
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 transition-all duration-300 hover:border-green-600 hover:bg-green-600 hover:text-white"
+                >
+                  <Icon size={18} />
+                </a>
+              );
+            })}
           </div>
         </div>
 
-        {/* Bottom Bar */}
-<div className="mt-14 border-t border-gray-800 pt-8">
-  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-    <p className="text-sm text-gray-500">
-      © 2026 PaperNova Industries. All Rights Reserved.
-    </p>
+        {/* Quick Links */}
 
-    <div className="flex items-center gap-6 text-sm">
-      <Link
-        href="/privacy-policy"
-        className="hover:text-green-500 transition-colors duration-300"
-      >
-        Privacy Policy
-      </Link>
+        <div>
+          <h4 className="mb-5 text-lg font-semibold text-white">
+            Quick Links
+          </h4>
 
-      <Link
-        href="/terms-and-conditions"
-        className="hover:text-green-500 transition-colors duration-300"
-      >
-        Terms & Conditions
-      </Link>
-    </div>
-  </div>
+          <ul className="space-y-3">
+            {quickLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  href={link.href}
+                  className="transition-colors duration-300 hover:text-green-500"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-  <p className="mt-5 text-center text-xs text-gray-500">
-    Designed & Developed with{" "}
-    <span className="text-red-500">❤️</span> by{" "}
-    <span className="font-medium text-white">Omveer Singh</span>{" "}
-    using{" "}
-    <span className="font-medium text-white">Next.js</span> &{" "}
-    <span className="font-medium text-white">Tailwind CSS</span>.
-  </p>
-</div>
+        {/* Products */}
+
+        <div>
+          <h4 className="mb-5 text-lg font-semibold text-white">
+            Products
+          </h4>
+
+          <ul className="space-y-3">
+            {products.map((product) => (
+              <li key={product.name}>
+                <Link
+                  href={product.href}
+                  className="transition-colors duration-300 hover:text-green-500"
+                >
+                  {product.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact */}
+
+        <div>
+          <h4 className="mb-5 text-lg font-semibold text-white">
+            Contact
+          </h4>
+
+          <ul className="space-y-4 text-gray-400">
+            <li>📞 +91 98765 XXXXX</li>
+
+            <li>✉️ info@papernova.com</li>
+
+            <li>
+              📍 Jaipur, Rajasthan, India
+            </li>
+          </ul>
+
+          {/* Request Quote */}
+
+          <Link
+            href="/#contact"
+            className="mt-6 inline-flex rounded-lg bg-green-600 px-5 py-3 font-semibold text-white transition hover:bg-green-700"
+          >
+            Request a Quote
+          </Link>
+        </div>
       </div>
-      
+
+      {/* Divider */}
+
+      <div className="mx-auto max-w-7xl border-t border-gray-800" />
+
+      {/* Bottom Bar */}
+
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-6 py-6 text-sm md:flex-row">
+
+        {/* Copyright */}
+
+        <p className="text-gray-500">
+          © {new Date().getFullYear()} PaperNova
+          Industries. All Rights Reserved.
+        </p>
+
+        {/* Legal Links */}
+
+        <div className="flex items-center gap-6">
+          <Link
+            href="/privacy-policy"
+            className="transition-colors duration-300 hover:text-green-500"
+          >
+            Privacy Policy
+          </Link>
+
+          <Link
+            href="/terms-and-conditions"
+            className="transition-colors duration-300 hover:text-green-500"
+          >
+            Terms & Conditions
+          </Link>
+        </div>
+
+      </div>
+
+      {/* Developer Credit */}
+
+      <div className="pb-8 text-center text-sm text-gray-500">
+
+        Designed & Developed with{" "}
+        <span className="text-pink-500">
+          ❤️
+        </span>{" "}
+        by{" "}
+        <span className="font-semibold text-gray-300">
+          Omveer Singh
+        </span>{" "}
+        using{" "}
+        <span className="text-gray-300">
+          Next.js
+        </span>{" "}
+        &{" "}
+        <span className="text-gray-300">
+          Tailwind CSS
+        </span>
+        .
+
+      </div>
+
     </footer>
   );
 }

@@ -2,15 +2,21 @@ type PrimaryButtonProps = {
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "outline";
+  onClick?: () => void;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
 };
 
 export default function PrimaryButton({
   children,
   className = "",
   variant = "primary",
+  onClick,
+  disabled = false,
+  type = "button",
 }: PrimaryButtonProps) {
   const baseClasses =
-    "rounded-xl px-6 py-3 font-semibold transition-all duration-300";
+    "rounded-xl px-6 py-3 font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
     primary:
@@ -21,7 +27,12 @@ export default function PrimaryButton({
   };
 
   return (
-    <button className={`${baseClasses} ${variants[variant]} ${className}`}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={`${baseClasses} ${variants[variant]} ${className}`}
+    >
       {children}
     </button>
   );

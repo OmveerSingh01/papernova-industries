@@ -26,9 +26,6 @@ export async function createCategory(
 }
 export async function getAllCategories() {
   return prisma.category.findMany({
-    where: {
-      isActive: true,
-    },
     orderBy: {
       createdAt: "desc",
     },

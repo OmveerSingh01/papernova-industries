@@ -39,10 +39,7 @@ export async function GET(
       return errorResponse(error.message, 404);
     }
 
-    return errorResponse(
-      "Internal Server Error",
-      500
-    );
+    return errorResponse("Internal Server Error", 500);
   }
 }
 
@@ -81,10 +78,7 @@ export async function PUT(
       return errorResponse(error.message, 400);
     }
 
-    return errorResponse(
-      "Internal Server Error",
-      500
-    );
+    return errorResponse("Internal Server Error", 500);
   }
 }
 
@@ -107,9 +101,6 @@ export async function DELETE(
       return errorResponse(error.message, 400);
     }
 
-    return errorResponse(
-      "Internal Server Error",
-      500
-    );
+    return errorResponse("Internal Server Error", 500);
   }
 }
