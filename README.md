@@ -101,64 +101,8 @@ The application includes:
 
 Sensitive credentials are stored in environment variables and are not committed to the repository.
 
----
 
-## 🚀 Getting Started
 
-### Clone the repository
-
-```bash
-git clone https://github.com/OmveerSingh01/papernova-industries.git
-cd papernova-industries
-```
-
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Configure environment variables
-
-Create a `.env` file in the project root:
-
-```env
-DATABASE_URL="your_database_url"
-DIRECT_URL="your_direct_database_url"
-JWT_SECRET="your_jwt_secret"
-
-ADMIN_NAME="your_admin_name"
-ADMIN_EMAIL="your_admin_email"
-ADMIN_PASSWORD="your_admin_password"
-
-NEXT_PUBLIC_SUPABASE_URL="your_supabase_url"
-NEXT_PUBLIC_SUPABASE_ANON_KEY="your_supabase_anon_key"
-```
-
-### Run Prisma
-
-```bash
-npx prisma generate
-npx prisma migrate deploy
-```
-
-### Start the development server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
-
-## 📦 Production
-
-Build the application:
-
-```bash
-npm run build
-```
 
 The production application is deployed on [Vercel](https://vercel.com/).
 
