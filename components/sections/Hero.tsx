@@ -1,4 +1,4 @@
-import PrimaryButton from "@/components/ui/PrimaryButton";
+import Link from "next/link";
 import StatsCard from "@/components/common/StatsCard";
 
 export default function Hero() {
@@ -41,6 +41,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-center px-6 pt-20 pb-12 text-white">
         <div className="max-w-2xl">
+
           {/* Badge */}
           <div className="mb-6 inline-flex items-center rounded-full border border-green-400/40 bg-green-500/10 px-5 py-2 backdrop-blur-sm">
             <span className="text-sm font-semibold uppercase tracking-[0.25em] text-green-400">
@@ -72,13 +73,23 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="mt-10 flex flex-wrap gap-5">
-            <PrimaryButton>
-              Explore Products
-            </PrimaryButton>
 
-            <PrimaryButton variant="outline">
+            {/* Explore Products */}
+            <Link
+              href="/products"
+              className="inline-flex items-center justify-center rounded-xl bg-green-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-green-700 hover:-translate-y-1 hover:shadow-lg"
+            >
+              Explore Products
+            </Link>
+
+            {/* Request Quote */}
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-xl border border-white px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-slate-900"
+            >
               Request Quote
-            </PrimaryButton>
+            </Link>
+
           </div>
 
           {/* Stats */}
@@ -91,6 +102,7 @@ export default function Hero() {
               />
             ))}
           </div>
+
         </div>
       </div>
 

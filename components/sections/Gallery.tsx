@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import Section from "../ui/Section";
@@ -109,14 +110,16 @@ export default function Gallery() {
         </p>
 
         <div className="mt-10 flex justify-center">
-          <PrimaryButton className="group">
-            Get In Touch
+          <Link href="/contact">
+            <PrimaryButton className="group">
+              Get In Touch
 
-            <ArrowRight
-              size={20}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </PrimaryButton>
+              <ArrowRight
+                size={20}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </PrimaryButton>
+          </Link>
         </div>
       </div>
     </Section>
