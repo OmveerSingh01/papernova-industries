@@ -604,7 +604,7 @@ export default function CheckoutPage() {
                       handleChange
                     }
                     placeholder="Enter your full name"
-                    className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-green-600 focus:ring-4 focus:ring-green-100"
                     required
                   />
 
@@ -626,7 +626,7 @@ export default function CheckoutPage() {
                       handleChange
                     }
                     placeholder="Enter your phone number"
-                    className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-green-600 focus:ring-4 focus:ring-green-100"
                     required
                   />
 
@@ -648,7 +648,7 @@ export default function CheckoutPage() {
                     }
                     rows={4}
                     placeholder="House number, street, area..."
-                    className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500 resize-none"
+                    className="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-green-600 focus:ring-4 focus:ring-green-100"
                     required
                   />
 
@@ -671,7 +671,7 @@ export default function CheckoutPage() {
                         handleChange
                       }
                       placeholder="City"
-                      className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500"
+                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-green-600 focus:ring-4 focus:ring-green-100"
                       required
                     />
 
@@ -690,7 +690,7 @@ export default function CheckoutPage() {
                         handleChange
                       }
                       placeholder="State"
-                      className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500"
+                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-green-600 focus:ring-4 focus:ring-green-100"
                       required
                     />
 
@@ -715,7 +715,7 @@ export default function CheckoutPage() {
                     placeholder="6-digit pincode"
                     inputMode="numeric"
                     maxLength={6}
-                    className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-green-600 focus:ring-4 focus:ring-green-100"
                     required
                   />
 

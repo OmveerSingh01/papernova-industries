@@ -38,7 +38,7 @@ export default function TextArea({
         onChange={onChange}
         required={required}
         disabled={disabled}
-        className="w-full resize-none rounded-xl border border-gray-300 px-4 py-3 outline-none transition-all duration-300 placeholder:text-gray-400 focus:border-green-600 focus:ring-4 focus:ring-green-100 disabled:cursor-not-allowed disabled:bg-gray-100"
+        className="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none transition-all duration-300 focus:border-green-600 focus:ring-4 focus:ring-green-100 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500"
       />
 
     </div>
