@@ -366,23 +366,27 @@ export default function ProductDetailsPage() {
             {product.stock > 0 && (
               <div className="mt-8">
 
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
 
                   {/* Quantity */}
 
-                  <div className="flex items-center overflow-hidden rounded-xl border border-slate-300">
+                  <div className="flex w-full items-center justify-between overflow-hidden rounded-xl border border-slate-300 bg-white text-slate-700 sm:w-auto">
 
                     <button
                       type="button"
                       onClick={
                         decreaseQuantity
                       }
-                      className="p-3 hover:bg-slate-100"
+                      aria-label="Decrease quantity"
+                      className="flex h-12 w-14 items-center justify-center text-slate-700 transition-colors hover:bg-slate-100 active:bg-slate-200"
                     >
-                      <Minus size={18} />
+                      <Minus
+                        size={22}
+                        strokeWidth={2.5}
+                      />
                     </button>
 
-                    <span className="px-5 font-semibold">
+                    <span className="flex min-w-12 items-center justify-center px-3 text-lg font-semibold text-slate-800">
                       {quantity}
                     </span>
 
@@ -391,9 +395,13 @@ export default function ProductDetailsPage() {
                       onClick={
                         increaseQuantity
                       }
-                      className="p-3 hover:bg-slate-100"
+                      aria-label="Increase quantity"
+                      className="flex h-12 w-14 items-center justify-center text-slate-700 transition-colors hover:bg-slate-100 active:bg-slate-200"
                     >
-                      <Plus size={18} />
+                      <Plus
+                        size={22}
+                        strokeWidth={2.5}
+                      />
                     </button>
 
                   </div>
@@ -405,7 +413,7 @@ export default function ProductDetailsPage() {
                     onClick={
                       handleAddToCart
                     }
-                    className={`flex flex-1 items-center justify-center gap-3 rounded-xl px-6 py-3 font-semibold text-white transition ${
+                    className={`flex min-h-12 flex-1 items-center justify-center gap-3 rounded-xl px-6 py-3 font-semibold text-white transition ${
                       addedToCart
                         ? "bg-green-700"
                         : "bg-green-600 hover:bg-green-700"
@@ -476,7 +484,7 @@ export default function ProductDetailsPage() {
                     Total
                   </span>
 
-                  <span className="text-xl font-bold">
+                  <span className="text-xl font-bold text-slate-900">
                     ₹
                     {totalPrice.toLocaleString(
                       "en-IN"

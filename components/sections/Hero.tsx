@@ -107,7 +107,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom Strip */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-white/10 bg-black/25 backdrop-blur-md">
+      <div className="relative md:absolute md:bottom-0 md:left-0 w-full border-t border-white/10 bg-black/25 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-4 px-6 py-4">
           {products.map((product) => (
             <div
