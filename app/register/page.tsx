@@ -67,7 +67,7 @@ export default function RegisterPage() {
         className="bg-white w-full max-w-md rounded-2xl shadow-lg p-8"
       >
 
-        <h1 className="text-3xl font-bold text-center mb-2">
+        <h1 className="text-3xl font-bold text-center mb-2 text-slate-900">
           Create Account
         </h1>
 
@@ -88,7 +88,7 @@ export default function RegisterPage() {
         )}
 
         <input
-          className="w-full border p-3 rounded-lg mb-4"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 mb-4"
           type="text"
           placeholder="Full Name"
           value={name}
@@ -99,7 +99,7 @@ export default function RegisterPage() {
         />
 
         <input
-          className="w-full border p-3 rounded-lg mb-4"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 mb-4"
           type="email"
           placeholder="Email"
           value={email}
@@ -110,7 +110,7 @@ export default function RegisterPage() {
         />
 
         <input
-          className="w-full border p-3 rounded-lg mb-4"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 mb-4"
           type="tel"
           placeholder="Phone Number"
           value={phone}
@@ -120,7 +120,7 @@ export default function RegisterPage() {
         />
 
         <input
-          className="w-full border p-3 rounded-lg mb-6"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 mb-6"
           type="password"
           placeholder="Password"
           value={password}

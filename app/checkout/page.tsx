@@ -832,21 +832,18 @@ export default function CheckoutPage() {
 
                 </div>
 
-                <div className="border-t border-slate-200 pt-4 flex justify-between">
+               <div className="border-t border-slate-200 pt-4 flex justify-between">
 
-                  <span className="text-lg font-semibold">
-                    Total
-                  </span>
+  <span className="text-lg font-semibold text-slate-900">
+    Total
+  </span>
 
-                  <span className="text-2xl font-bold">
-                    ₹
-                    {total.toLocaleString(
-                      "en-IN"
-                    )}
-                  </span>
+  <span className="text-2xl font-bold text-slate-900">
+    ₹
+    {total.toLocaleString("en-IN")}
+  </span>
 
-                </div>
-
+</div>
               </div>
 
               {/* Place Order */}

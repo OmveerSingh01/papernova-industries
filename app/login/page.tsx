@@ -128,7 +128,7 @@ export default function CustomerLoginPage() {
 
         {/* Email */}
 
-        <label className="block text-sm font-medium mb-2">
+        <label className="block text-sm font-medium mb-2 text-slate-700">
           Email
         </label>
 
@@ -139,13 +139,13 @@ export default function CustomerLoginPage() {
           onChange={(e) =>
             setEmail(e.target.value)
           }
-          className="w-full border p-3 rounded-xl mb-5 outline-none focus:ring-2 focus:ring-green-500"
+          className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 mb-5 outline-none focus:border-green-600 focus:ring-2 focus:ring-green-500"
           required
         />
 
         {/* Password */}
 
-        <label className="block text-sm font-medium mb-2">
+        <label className="block text-sm font-medium mb-2 text-slate-700">
           Password
         </label>
 
@@ -156,7 +156,7 @@ export default function CustomerLoginPage() {
           onChange={(e) =>
             setPassword(e.target.value)
           }
-          className="w-full border p-3 rounded-xl mb-6 outline-none focus:ring-2 focus:ring-green-500"
+         className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 mb-6 outline-none focus:border-green-600 focus:ring-2 focus:ring-green-500"
           required
         />
 

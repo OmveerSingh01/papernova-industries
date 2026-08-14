@@ -27,8 +27,7 @@ export default function CartPage() {
   }, []);
 
   function loadCart() {
-    const storedCart =
-      localStorage.getItem("cart");
+    const storedCart = localStorage.getItem("cart");
 
     if (!storedCart) {
       setCart([]);
@@ -37,9 +36,7 @@ export default function CartPage() {
     }
 
     try {
-      const parsedCart = JSON.parse(
-        storedCart
-      );
+      const parsedCart = JSON.parse(storedCart);
 
       setCart(
         Array.isArray(parsedCart)
@@ -116,7 +113,6 @@ export default function CartPage() {
 
   function clearCart() {
     setCart([]);
-
     localStorage.removeItem("cart");
   }
 
@@ -257,15 +253,19 @@ export default function CartPage() {
                     <div className="w-28 h-28 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100">
 
                       {item.imageUrl ? (
+
                         <img
                           src={item.imageUrl}
                           alt={item.name}
                           className="w-full h-full object-cover"
                         />
+
                       ) : (
+
                         <div className="w-full h-full flex items-center justify-center text-gray-400">
                           No Image
                         </div>
+
                       )}
 
                     </div>
@@ -316,22 +316,28 @@ export default function CartPage() {
 
                         <div className="flex items-center border border-slate-300 rounded-xl overflow-hidden">
 
+                          {/* Minus */}
+
                           <button
                             onClick={() =>
                               decreaseQuantity(
                                 item.productId
                               )
                             }
-                            className="p-2.5 hover:bg-slate-100"
+                            className="p-2.5 text-slate-900 hover:bg-slate-100"
                           >
                             <Minus
                               size={17}
                             />
                           </button>
 
-                          <span className="px-5 font-semibold">
+                          {/* Quantity */}
+
+                          <span className="px-5 font-semibold text-slate-900">
                             {item.quantity}
                           </span>
+
+                          {/* Plus */}
 
                           <button
                             onClick={() =>
@@ -339,7 +345,7 @@ export default function CartPage() {
                                 item.productId
                               )
                             }
-                            className="p-2.5 hover:bg-slate-100"
+                            className="p-2.5 text-slate-900 hover:bg-slate-100"
                           >
                             <Plus
                               size={17}
@@ -347,6 +353,8 @@ export default function CartPage() {
                           </button>
 
                         </div>
+
+                        {/* Item Total */}
 
                         <p className="text-xl font-bold text-slate-900">
                           ₹
@@ -425,15 +433,17 @@ export default function CartPage() {
 
                 </div>
 
+                {/* Total */}
+
                 <div className="border-t border-slate-200 mt-6 pt-6">
 
                   <div className="flex justify-between items-center">
 
-                    <span className="text-lg font-semibold">
+                    <span className="text-lg font-semibold text-slate-900">
                       Total
                     </span>
 
-                    <span className="text-2xl font-bold">
+                    <span className="text-2xl font-bold text-slate-900">
                       ₹
                       {subtotal.toLocaleString(
                         "en-IN"
